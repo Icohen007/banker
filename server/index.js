@@ -28,7 +28,7 @@ io.on('connection', (socket) => {
 });
 
 server.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+  console.log(`Starting Banker application on port ${port}`);
 });
 
 fetchRecentBids(io, 1000);

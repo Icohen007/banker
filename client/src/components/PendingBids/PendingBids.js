@@ -5,11 +5,17 @@ import { useGlobalData } from '../../hooks/useGlobalData';
 import { STATUS } from '../../lib/contants';
 
 const getRowClassName = ({ index }) => (index % 2 === 0 ? 'even' : 'odd');
+const dateToUnix = (date) => Number((date.getTime() / 1000).toFixed(0));
+const MAX_RESOLVE_TIME = 60;
 
 const PendingBids = () => {
   const { bids } = useGlobalData();
-  const pendingBids = useMemo(() => Object.values(bids)
-    .filter((bid) => bid.status === STATUS.PENDING), [bids]);
+  const pendingBids = useMemo(() => {
+    const currentDateUnix = dateToUnix(new Date());
+    return Object.values(bids)
+      .filter((bid) => bid.status === STATUS.PENDING)
+      .filter((bid) => bid.time >= currentDateUnix - MAX_RESOLVE_TIME);
+  }, [bids]);
 
   return (
     <StyledTableWrapper>

@@ -32,11 +32,6 @@ const BidsStats = () => {
           {' '}
           {error.length}
         </p>
-        <p>
-          Total:
-          {' '}
-          {Object.values(bids).length}
-        </p>
       </div>
     </Container>
   );
