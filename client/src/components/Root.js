@@ -30,6 +30,7 @@ justify-content: space-between;
 align-items: center;
 max-width: 1000px;
 width: 100%;
+margin-top: 60px;
 `;
 
 const Title = styled.h1`
