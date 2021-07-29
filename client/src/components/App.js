@@ -1,8 +1,7 @@
 import React from 'react';
 import GlobalStyle from './Global.style';
 import Root from './Root';
-// eslint-disable-next-line import/named
-import { GlobalDataProvider } from '../../hooks/useGlobalData';
+import { GlobalDataProvider } from '../hooks/useGlobalData';
 
 const App = () => (
   <React.StrictMode>

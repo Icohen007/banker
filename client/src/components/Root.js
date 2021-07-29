@@ -1,8 +1,9 @@
 import React from 'react';
+import { PendingBids } from './PendingBids';
 
 const Root = () => (
   <div>
-    Hello World
+    <PendingBids />
   </div>
 );
 

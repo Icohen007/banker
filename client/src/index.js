@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'react-virtualized/styles.css';
 import App from './components/App';
 
 ReactDOM.render(
