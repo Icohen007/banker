@@ -14,29 +14,31 @@ const BidsStats = () => {
   }, [bids]);
 
   return (
-    <div>
+    <Container>
       <Header>Resolved Bids</Header>
-      <p>
-        Win:
-        {' '}
-        {win.length}
-      </p>
-      <p>
-        Lose:
-        {' '}
-        {lose.length}
-      </p>
-      <p>
-        Error:
-        {' '}
-        {error.length}
-      </p>
-      <p>
-        Total:
-        {' '}
-        {Object.values(bids).length}
-      </p>
-    </div>
+      <div>
+        <p>
+          Win:
+          {' '}
+          {win.length}
+        </p>
+        <p>
+          Lose:
+          {' '}
+          {lose.length}
+        </p>
+        <p>
+          Error:
+          {' '}
+          {error.length}
+        </p>
+        <p>
+          Total:
+          {' '}
+          {Object.values(bids).length}
+        </p>
+      </div>
+    </Container>
   );
 };
 
@@ -44,6 +46,13 @@ const Header = styled.h1`
 padding-bottom: 10px;
 font-size: 20px;
 font-weight: 700;
+`;
+
+const Container = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 `;
 
 export default React.memo(BidsStats);

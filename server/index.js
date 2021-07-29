@@ -31,4 +31,4 @@ server.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
 
-fetchRecentBids(io);
+fetchRecentBids(io, 1000);

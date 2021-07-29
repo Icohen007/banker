@@ -26,7 +26,7 @@ const fetchBidData = async (bid) => {
   return null;
 };
 
-const fetchRecentBids = async (io) => {
+const fetchRecentBids = async (io, intervalInMs = 1000) => {
   setTimeout(async () => {
     const now = dateToUnix(new Date());
     try {
@@ -42,7 +42,7 @@ const fetchRecentBids = async (io) => {
       console.log(`error fetching bids: ${err}`);
     }
     prevTime = now;
-    fetchRecentBids(io);
+    fetchRecentBids(io, intervalInMs);
   }, 1000);
 };
 

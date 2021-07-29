@@ -31,6 +31,10 @@ align-items: center;
 max-width: 1000px;
 width: 100%;
 margin-top: 60px;
+
+@media (max-width: 1100px) {
+flex-direction: column; 
+}
 `;
 
 const Title = styled.h1`
