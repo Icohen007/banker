@@ -56,6 +56,14 @@ const GlobalStyle = createGlobalStyle`
     li {
     list-style-type: none;
     }
+    
+    .dropdown-control {
+      width: 200px;
+    }
+    
+    .dropdown-menu {
+      width: 200px;
+    }
 `;
 
 export default GlobalStyle;
