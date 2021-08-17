@@ -1,6 +1,6 @@
-# Banker Biga Bid
+# Banker
 
-Biga bid test
+Company home assignment
 made with React, Node.js, Express and Redis.
 
 ### How to use
