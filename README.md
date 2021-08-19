@@ -1,6 +1,6 @@
 # Banker
 
-Company home assignment - (Time limit - 3.5 hours)
+### Company home assignment - (Time limit - 3.5 hours)
 made with React, Node.js, Express and Redis.
 
 ### How to use
