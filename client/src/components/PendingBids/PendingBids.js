@@ -31,7 +31,7 @@ const PendingBids = () => {
         rowClassName={getRowClassName}
       >
         <Column label="Bid id" dataKey="id" width={400} />
-        <Column label="Bid Time" dataKey="time" width={150} />
+        <Column label="Bid Time" dataKey="time" width={150} cellRenderer={({ cellData }) => new Date(cellData * 1000).toLocaleTimeString()} />
         <Column label="Price" dataKey="price" width={50} />
       </StyledTable>
     </StyledTableWrapper>
